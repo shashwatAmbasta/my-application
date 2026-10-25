@@ -1,0 +1,11 @@
+from sqlachmey import  string , integer, Column
+
+from app.db.database import Base
+
+class Employee(Base):
+    __tablename__="employee"
+    id=Column(integer,primary_key=True,index=True)
+    name=Column(string)
+    email=Column(string,unique=True,index=True)
+    department=Column(string)
+    salary=Column(integer)
